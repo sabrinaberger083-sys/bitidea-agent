@@ -26,14 +26,22 @@ Use any model you want — [OpenRouter](https://openrouter.ai) (200+ models), [X
 ## Quick Install
 
 ```bash
-git clone https://github.com/sabrinaberger083-sys/bitidea-agent.git ~/Desktop/bitidea-agent
-cd ~/Desktop/bitidea-agent
+curl -fsSL https://raw.githubusercontent.com/sabrinaberger083-sys/bitidea-agent/main/scripts/install.sh | bash
+```
+
+Works on Linux, macOS, WSL2, and Android via Termux.
+
+<details>
+<summary>Manual install (developer mode)</summary>
+
+```bash
+git clone https://github.com/sabrinaberger083-sys/bitidea-agent
+cd bitidea-agent
 python3.11 -m venv venv && source venv/bin/activate
 pip install -e .
 bitidea --version
 ```
-
-Works on Linux, macOS, WSL2, and Android via Termux.
+</details>
 
 > **Android / Termux:** The tested manual path is documented in the [Termux guide](https://hermes-agent.nousresearch.com/docs/getting-started/termux). On Termux, Bitidea installs a curated `.[termux]` extra because the full `.[all]` extra currently pulls Android-incompatible voice dependencies.
 >
